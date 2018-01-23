@@ -162,6 +162,13 @@ public class BlurHelper {
                 c.drawColor(Color.parseColor("#FAFAFA"));
             }
         }
+        // FIXME: 2018/1/16 有争议，是否需要绘制背景？
+        /*else {
+            Drawable bgDrawable = v.getBackground();
+            if (bgDrawable != null) {
+                bgDrawable.draw(c);
+            }
+        }*/
         if (fullScreen) {
             if (statusBarHeight > 0 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && v.getContext() instanceof Activity) {
                 int statusBarColor = ((Activity) v.getContext()).getWindow().getStatusBarColor();
