@@ -943,7 +943,7 @@ public abstract class BasePopupWindow implements BasePopup, PopupWindow.OnDismis
         }
         if (!hasAnima) {
             if (mStateListener != null) {
-                mStateListener.onWithAnimaDismiss();
+                mStateListener.onDismissWithAnima();
             }
         }
         //如果有动画，则不立刻执行dismiss
@@ -963,7 +963,7 @@ public abstract class BasePopupWindow implements BasePopup, PopupWindow.OnDismis
         }
         mPopupWindow.callSuperDismiss();
         if (mStateListener != null) {
-            mStateListener.onWithAnimaDismiss();
+            mStateListener.onDismissWithAnima();
         }
 
     }
@@ -1047,7 +1047,7 @@ public abstract class BasePopupWindow implements BasePopup, PopupWindow.OnDismis
         public void onAnimationStart(Animator animation) {
             isExitAnimaPlaying = true;
             if (mStateListener != null) {
-                mStateListener.onAnimaDismissStart();
+                mStateListener.onDismissWithAnimaStart();
             }
         }
 
@@ -1075,7 +1075,7 @@ public abstract class BasePopupWindow implements BasePopup, PopupWindow.OnDismis
         public void onAnimationStart(Animation animation) {
             isExitAnimaPlaying = true;
             if (mStateListener != null) {
-                mStateListener.onAnimaDismissStart();
+                mStateListener.onDismissWithAnimaStart();
             }
         }
 

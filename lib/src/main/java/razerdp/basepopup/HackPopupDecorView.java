@@ -178,12 +178,12 @@ public class HackPopupDecorView extends ViewGroup {
     class InnerPopupWindowStateListener extends razerdp.basepopup.InnerPopupWindowStateListener {
 
         @Override
-        void onAnimaDismissStart() {
+        void onDismissWithAnimaStart() {
             dismissBlurAnima();
         }
 
         @Override
-        void onWithAnimaDismiss() {
+        void onDismissWithAnima() {
             dismissBlurAnima(0);
         }
     }
